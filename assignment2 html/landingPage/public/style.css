@@ -1,0 +1,344 @@
+* {
+    transition: .2s linear;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-family: fantasy;
+}
+
+.btn1 {
+    background-color: blueviolet;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+.btn1:hover {
+    background-color: rgb(94, 15, 168);
+    box-shadow: inset 5px 5px 12px rgba(130, 75, 196, 0.438), 5px 5px 12px rgba(0, 0, 0, .16);
+
+}
+
+.btn2 {
+    border: 1px solid rgba(137, 43, 226, 0.5);
+    outline: none;
+    color: blueviolet;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: transparent;
+
+
+}
+
+.btn2:hover {
+    border: none;
+    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+
+}
+
+/*  Header */
+.header , .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+    font-family: fantasy;
+    width: 100vw;
+    position: fixed;
+    background-color: white;
+}
+
+.header li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.header li:hover {
+    border-bottom: 1px solid blueviolet;
+    padding-bottom: 2px;
+}
+
+.logo {
+    width: 20%;
+}
+
+.logo span {
+    color: blueviolet;
+    font-size: 2em;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 55%;
+}
+
+/* Home */
+
+.home,
+.about,
+.team ,.faq, .contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    /* background-color: rgb(232, 238, 241); */
+
+}
+
+.content {
+    width: 30%;
+    /* text-align: right; */
+
+}
+
+.content p {
+    color: rgb(190, 187, 187);
+}
+
+.content button {
+    width: 30%;
+}
+
+.home-img {
+    width: 50%;
+    height: 65%;
+    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+}
+
+/* About */
+
+.about {
+    justify-content: flex-start;
+    border: 5px solid rgb(232, 238, 241);
+    height: 100vh;
+    /* border: 5px solid rgba(137, 43, 226, 0.342); */
+
+}
+
+.about .content {
+    height: 70%;
+    margin-top: 15%;
+}
+
+.about span {
+    color: blueviolet;
+
+}
+
+.about-img {
+    width: 65%;
+    height: 75%;
+}
+
+
+/* Services */
+
+
+.services {
+    height: 100vh;
+    text-align: center;
+    padding-top: 5em;
+}
+
+.services p {
+    font-size: small;
+    color: rgb(160, 159, 159);
+}
+
+.para {
+    width: 70%;
+    margin-left: 15%;
+    padding: 1.2em 0;
+}
+
+.services span {
+    color: blueviolet;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 40%;
+}
+
+.card {
+    width: 180px;
+    height: 180px;
+    padding: 1em .5em;
+    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+}
+
+.icon {
+    color: blueviolet;
+    height: 40%;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    background-color: rgba(137, 43, 226, 0.233);
+    box-shadow: none;
+    /* color: white; */
+
+}
+
+/* Team */
+.t-head{
+    text-align: center;
+}
+.t-head span{
+    color: blueviolet;
+}
+.team {
+    background-color: blueviolet;
+    height: 75vh;
+}
+
+.team img{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    padding: 10px;
+    border: 5px solid white;
+    outline: 2px solid rgb(228, 157, 250);
+}
+.t-card{
+ height: 300px;
+ width: 200px;
+ display: flex;
+ flex-direction: column;
+justify-content: space-around;
+align-items: center;
+color: whitesmoke;
+}
+.data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: blueviolet;
+}
+.team .name{
+    font-size: 1.5em;
+    font-family: fantasy;
+    
+    margin: 0;
+}
+.team .para{
+    font-size: small;
+    margin: 0;
+}
+
+/* FAQs */
+
+.faq span{
+    color: blueviolet;
+    font-size: 1.6em;
+}
+.q1{
+    width: 50%;
+
+}
+.q2{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.ques{
+    border-radius: 20px;
+    padding: 10px 0 10px 25px;
+   color: blueviolet;
+    width: 90%;
+    cursor: pointer;
+    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+}
+.ques:hover{
+    background-color: rgba(137, 43, 226, 0.233);
+    box-shadow: none;
+
+}
+
+.q2 img{
+    width: 35px;
+}
+
+
+/* Contact */
+
+.contact{
+    justify-content: center; 
+    background-color: blueviolet;
+ 
+}
+
+.form{
+    height: 60%;
+    width: 60%;
+    background-color: white;
+border:5px outset rgb(233, 191, 233);
+
+}
+
+.form h1{
+    /* color: rgb(56, 6, 102); */
+    text-align: center;
+}
+form{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+input{
+    border: none; outline: none;
+    /* border-bottom: 1px solid blueviolet; */
+    padding: 10px 0 10px 25px;
+    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+color: blueviolet;
+}
+
+.btn{
+    padding: 10px 0 10px 0;
+    font-size: 1em;
+}
+
+/* Footer */
+
+
+.footer{
+    position: static;
+    font-family: sans-serif;
+}
+
+.footer span{
+    color: blueviolet;
+}
