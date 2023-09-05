@@ -9,6 +9,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    transition: .2s linear ease;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -56,7 +58,8 @@ h1 {
 }
 
 /*  Header */
-.header , .footer {
+.header,
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,11 +96,22 @@ h1 {
     width: 55%;
 }
 
+.bar i {
+    margin-left: 10px;
+}
+
+.bar {
+    display: none;
+
+}
+
 /* Home */
 
 .home,
 .about,
-.team ,.faq, .contact{
+.team,
+.faq,
+.contact {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -207,18 +221,20 @@ h1 {
 }
 
 /* Team */
-.t-head{
+.t-head {
     text-align: center;
 }
-.t-head span{
+
+.t-head span {
     color: blueviolet;
 }
+
 .team {
     background-color: blueviolet;
     height: 75vh;
 }
 
-.team img{
+.team img {
     border-radius: 50%;
     height: 120px;
     width: 120px;
@@ -226,16 +242,18 @@ h1 {
     border: 5px solid white;
     outline: 2px solid rgb(228, 157, 250);
 }
-.t-card{
- height: 300px;
- width: 200px;
- display: flex;
- flex-direction: column;
-justify-content: space-around;
-align-items: center;
-color: whitesmoke;
+
+.t-card {
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: whitesmoke;
 }
-.data{
+
+.data {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -243,73 +261,79 @@ color: whitesmoke;
     background-color: white;
     color: blueviolet;
 }
-.team .name{
+
+.team .name {
     font-size: 1.5em;
     font-family: fantasy;
-    
+
     margin: 0;
 }
-.team .para{
+
+.team .para {
     font-size: small;
     margin: 0;
 }
 
 /* FAQs */
 
-.faq span{
+.faq span {
     color: blueviolet;
     font-size: 1.6em;
 }
-.q1{
+
+.q1 {
     width: 50%;
 
 }
-.q2{
+
+.q2 {
     display: flex;
     align-items: center;
     margin-top: 1em;
 }
 
-.ques{
+.ques {
     border-radius: 20px;
     padding: 10px 0 10px 25px;
-   color: blueviolet;
+    color: blueviolet;
     width: 90%;
     cursor: pointer;
     box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
 }
-.ques:hover{
+
+.ques:hover {
     background-color: rgba(137, 43, 226, 0.233);
     box-shadow: none;
 
 }
 
-.q2 img{
+.q2 img {
     width: 35px;
 }
 
 
 /* Contact */
 
-.contact{
-    justify-content: center; 
+.contact {
+    justify-content: center;
     background-color: blueviolet;
- 
+
 }
 
-.form{
+.form {
     height: 60%;
     width: 60%;
     background-color: white;
-border:5px outset rgb(233, 191, 233);
+    border: 5px outset rgb(233, 191, 233);
 
 }
 
-.form h1{
+.form h1 {
     /* color: rgb(56, 6, 102); */
     text-align: center;
 }
-form{
+
+form {
     width: 90%;
     height: 70%;
     display: flex;
@@ -318,15 +342,16 @@ form{
     margin-left: 5%;
 }
 
-input{
-    border: none; outline: none;
+input {
+    border: none;
+    outline: none;
     /* border-bottom: 1px solid blueviolet; */
     padding: 10px 0 10px 25px;
     box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
-color: blueviolet;
+    color: blueviolet;
 }
 
-.btn{
+.btn {
     padding: 10px 0 10px 0;
     font-size: 1em;
 }
@@ -334,11 +359,131 @@ color: blueviolet;
 /* Footer */
 
 
-.footer{
+.footer {
     position: static;
     font-family: sans-serif;
 }
 
-.footer span{
+.footer span {
     color: blueviolet;
+}
+
+
+/* Media Quries */
+
+@media (max-width : 1000px) {
+
+    .content {
+        width: 45%;
+    }
+
+    .home-img {
+        width: 40%;
+    }
+
+    .about-img {
+        width: 60%;
+    }
+
+
+}
+
+@media (max-width : 855px) {
+    .tabs {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-around;
+    }
+
+    /* Menue styling starts */
+    .bar {
+        display: block;
+        position: relative;
+    }
+
+    .bar i {
+        cursor: pointer;
+    }
+
+    .menue {
+        position: absolute;
+        top: 3.5em;
+        right: .5em;
+        width: 150px;
+        background-color: #c8c3ca;
+        text-align: center;
+        padding: 1em 0;
+        display: none;
+    }
+
+    .menue li {
+        padding: .4em;
+
+    }
+
+    .menue a {
+        color: rgb(6, 6, 7);
+        letter-spacing: 2px;
+    }
+
+    .menue.active {
+        display: block;
+    }
+
+    /* Menue styling end */
+    .cd {
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .card {
+        margin: 1em 0;
+    }
+
+    .home,
+    .cards,
+    .services,
+    .team,
+    .faq {
+        flex-direction: column;
+        height: max-content;
+
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .home {
+        padding-top: 120px;
+    }
+
+    .content,
+    .home-img,
+    .about .content,
+    .about-img {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width : 580px) {
+    .cd {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .q1 {
+        width: 96vw;
+    }
+    .form{
+        width:96% ;
+    }
+    .footer h3{
+        font-size:small;
+    }
+
 }
