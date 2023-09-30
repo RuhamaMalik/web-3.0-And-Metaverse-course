@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-<!-- Custom css file -->
+  <!-- ClOUDFLARE Animate.css  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- BOOTSTRAP CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom css file -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,24 +27,26 @@
     <div class="tabs">
       <li><a href="#home">Home</a> </li>
       <li><a href="#about">About</a></li>
-      <li><a href="#services" class="services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="#faq">FAQs...</a></li>
       <li><a href="#contact">Contact</a> </li>
-      <button class="btn1">Download</button>
+      <button class="btn1" >Demo</button>
 
     </div>
     <div class="bar">
-      <button class="btn1">Download</button>
       <i class="fa fa-bars" id="bar"></i>
       <!-- Menue -->
       <div class="menue">
-        <li><a href="#home">Home</a> </li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#faq">FAQs...</a></li>
-        <li><a href="#contact">Contact</a> </li>
+        <a href="#home" class="option">Home </a>
+        <a href="#about" class="option">About </a>
+        <a href="#reviews" class="option">Reviews </a>
+        <a href="#services" class="option">Services</a>
+        <a href="#team" class="option">Team</a>
+        <a href="#faq" class="option">FAQs...</a>
+        <a href="#contact" class="option">Contact </a>
+        <a href="#" > <button class="btn1">Demo</button> </a>
       </div>
     </div>
   </div>
@@ -57,8 +60,8 @@
       <h1>Landing template for startups</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores praesentium quas nesciunt dignissimos ex hic.
       </p>
-      <button class="btn1">Visit</button>
-      <button class="btn2">Details</button>
+      <a href="#about"> <button class="btn1">Visit</button></a>
+      <a href="#about"> <button class="btn2">Details</button> </a>
     </div>
 
     <img class="home-img" src="./images/home.jpg" alt="homeImage">
@@ -78,12 +81,107 @@
       <p><span>> </span>Lorem ipsum dolor sit amet consectetur.</p>
       <p><span>> </span>Lorem ipsum dolor sit amet consectetur.</p>
       <p><span>> </span>Lorem ipsum dolor sit amet consectetur.</p>
-      <button class="btn1">Learn more</button>
-      <button class="btn2">Contact us</button>
+      <button class="btn1" id="triggerModal">Learn more</button>
+      <a href="#contact"> <button class="btn2">Contact us</button></a>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="myModal">
+      <div class="modal-content-about">
+        <span class="close" id="closeModal">&times;</span>
+        <h1>About<span>Us</span> </h1>
+
+        <p><span>> </span>Lorem ipsum dolor sit amet consectetur.</p>
+        <p><span>> </span>Lorem ipsum dolor sit amet consectetur.</p>
+        <p><span>> </span>Lorem ipsum dolor sit amet consectetur.</p>
+        <p><span>> </span>Lorem ipsum dolor sit amet consectetur.</p>
+        <p><span>> </span>Lorem ipsum dolor sit amet consectetur.</p>
+
+        <p class="justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, facilis sequi earum tempora
+          nesciunt, quibusdam harum quia, molestiae saepe quam amet! Consectetur atque quam placeat ab illum alias illo
+          ea. Vel voluptate molestias culpa praesentium quam nobis cum tempore possimus quidem tempora consectetur,
+          minus, in nam neque esse adipisci expedita officiis blanditiis quo laborum distinctio ad rerum. Rem veniam
+          explicabo dolore, atque adipisci delectus iste itaque soluta nostrum recusandae animi id earum, mollitia
+          sapiente, corporis incidunt est asperiores esse voluptate? Officia neque vel architecto magnam quae sapiente
+          tenetur impedit libero unde ullam dignissimos, aliquam quia necessitatibus nisi error natus, quisquam
+          temporibus voluptas quo quaerat delectus, quibusdam eius! Inventore delectus temporibus quibusdam. Porro
+          explicabo amet sit quia optio at molestiae id fugit atque dignissimos maiores beatae, et recusandae nulla
+          facere voluptatum provident? Assumenda et recusandae sit, eius sapiente cum, quae nisi tenetur quisquam
+          voluptatibus nesciunt soluta a consequuntur blanditiis sunt possimus minima quos quia placeat. Ut nesciunt rem
+          voluptatem aut. Cumque, reiciendis excepturi repellat ullam vel voluptate mollitia! Dolore aspernatur
+          similique quibusdam! Omnis suscipit illo reiciendis fugiat voluptate quibusdam quas sit doloribus at amet modi
+          dolore in autem odio ipsum esse molestias, quae, officia non cum voluptatibus sunt totam! Veritatis, nesciunt.
+        </p>
+      </div>
     </div>
 
   </div>
 
+  <!-- REVIEWS -->
+  <div class="reviews" id="reviews">
+    <h1>Client <span>Reviews</span> </h1>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="gridDiv">
+            <div class="child1"> <img src="./images/team1.jpg" alt=""> </div>
+            <div class="child2">
+              <p class="icon">,,</p>
+              <p class="msg">Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet
+                consectetur adipisicing elit. Quam consequuntur molestias iure saepe libero
+                cum.</p>
+              <h2>Maha Khan</h2>
+              <p class="location"> london.street1</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="gridDiv">
+            <div class="child1"> <img src="./images/team7.webp" alt=""> </div>
+            <div class="child2">
+              <p class="icon">,,</p>
+              <p class="msg">Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet
+                consectetur adipisicing elit. Quam consequuntur molestias iure saepe libero
+                cum.</p>
+              <h2>Maha Khan</h2>
+              <p class="location"> london.street1</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="gridDiv">
+            <div class="child1"> <img src="./images/team4.jpg" alt=""> </div>
+            <div class="child2">
+              <p class="icon">,,</p>
+              <p class="msg">Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet
+                consectetur adipisicing elit. Quam consequuntur molestias iure saepe libero
+                cum.</p>
+              <h2>Maha Khan</h2>
+              <p class="location"> london.street1</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </div>
   <!--  Services -->
 
 
@@ -92,7 +190,7 @@
     <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam quos, accusamus repellendus
       laboriosam ducimus voluptate quaerat modi soluta minus cumque neque optio nostrum reprehenderit! Alias harum non
       facilis quidem!</p>
-    <div class="cd" >
+    <div class="cd">
       <div class="cards">
 
         <div class="card animate__animated">
@@ -214,7 +312,7 @@
         </div>
       </div>
 
-     
+
     </div>
   </div>
 
@@ -287,7 +385,7 @@
         <input type="text" placeholder="Your Name">
         <input type="text" placeholder="Your Email">
         <textarea type="text" placeholder="Your Mesage" rows="2"></textarea>
-        <button type="button" id="contactBtn" class="btn1 btn" data-toggle="modal" data-target="#exampleModalCenter">Submit →</button>
+        <button type="button" id="triggerModal2" class="btn1 btn">Submit →</button>
       </form>
     </div>
   </div>
@@ -295,9 +393,9 @@
 
   <!-- MODAL -->
 
-  <div class="modal" id="myModal">
+  <div class="modal" id="myModal2">
     <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
+      <span class="close" id="closeModal2">&times;</span>
       <h2>Thank You!</h2>
       <p>Your message has been submitted successfully.</p>
     </div>
@@ -317,8 +415,16 @@
     <h3>created by <span>ruhama gull</span> | all rights reserved.</h3>
   </div>
 
-
-<script src="index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
