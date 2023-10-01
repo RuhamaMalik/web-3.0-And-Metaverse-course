@@ -1,3 +1,5 @@
+// MOBILE MENU BAR
+
 let menue = document.querySelector('.menue');
 let options = document.querySelectorAll('.option')
 let bar = document.getElementById('bar')
@@ -20,8 +22,30 @@ window.addEventListener("click", function(event) {
   }
 });
  
+// ACTIVE TAB
+const tabItems = document.querySelectorAll('.tabs li');
 
+tabItems.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabItems.forEach(item => {
+      item.classList.remove('active-tab');
+    });
 
+    tab.classList.add('active-tab');
+  });
+});
+tabItems[0].classList.add('active-tab');
+
+//LOADING SCREEN
+
+window.addEventListener('load', function () {
+  const loader = document.querySelector('.welcome');
+  loader.classList.add('animate-loader');
+
+  setTimeout(function () {
+    loader.classList.remove('animate-loader');
+  }, 8000); 
+});
 
 // CARDS
 

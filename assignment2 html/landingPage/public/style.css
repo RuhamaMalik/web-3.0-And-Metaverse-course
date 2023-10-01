@@ -29,7 +29,7 @@ h1 {
     border: none;
     outline: none;
     color: aliceblue;
-    padding: 5px 10px;
+    padding: 5px 5px;
     cursor: pointer;
     border-radius: 20px;
 
@@ -98,7 +98,15 @@ h1 {
     align-items: center;
     width: 55%;
 }
-
+.tabs li a{
+    text-decoration: none;
+}
+.tabs li a:hover{
+    color: blueviolet;
+}
+.tabs .active-tab a {
+    color: blueviolet; 
+  }
 .bar i {
     margin-left: 10px;
 }
@@ -107,6 +115,140 @@ h1 {
     display: none;
 
 }
+/* /////////////////////// LOADING Screen  /////////////// */
+
+.welcome {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(16, 16, 17) ;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: none;
+  }
+  
+  .welcome.animate-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  /* .loading */
+  .welcome .loading {
+    width: 180px;
+    height: 80px;
+    position: relative;
+  }
+  
+  /* .loading p */
+  .welcome .loading p {
+    top: 0;
+    padding: 0;
+    margin: 0;
+    color: blueviolet;
+    font-family:"Oxygen", sans-serif ;
+    animation: text 3.5s ease both infinite;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  /* .loading p keyframes */
+  @keyframes text {
+    0% {
+      letter-spacing: 1px;
+      transform: translateX(0px);
+    }
+    40% {
+      letter-spacing: 2px;
+      transform: translateX(26px);
+    }
+    80% {
+      letter-spacing: 1px;
+      transform: translateX(32px);
+    }
+    90% {
+      letter-spacing: 2px;
+      transform: translateX(0px);
+    }
+    100% {
+      letter-spacing: 1px;
+      transform: translateX(0px);
+    }
+  }
+  
+  /* .loading span */
+  .welcome .loading span {
+    background-color:  white/* $c-01 */; /* Replace with your color value */
+    border-radius: 50px;
+    display: block;
+    height: 20px;
+    width: 16px;
+    bottom: 0;
+    position: absolute;
+    transform: translateX(64px);
+    animation: loading 3.5s ease both infinite;
+  }
+  
+  /* .loading span :before */
+  .welcome .loading span:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet ;
+    border-radius: inherit;
+    animation: loading2 3.5s ease both infinite;
+  }
+  
+  /* .loading span keyframes */
+  @keyframes loading {
+    0% {
+      width: 16px;
+      transform: translateX(0px);
+    }
+    40% {
+      width: 100%;
+      transform: translateX(0px);
+    }
+    80% {
+      width: 16px;
+      transform: translateX(64px);
+    }
+    90% {
+      width: 100%;
+      transform: translateX(0px);
+    }
+    100% {
+      width: 16px;
+      transform: translateX(0px);
+    }
+  }
+  
+  /* .loading span :before keyframes */
+  @keyframes loading2 {
+    0% {
+      transform: translateX(0px);
+      width: 16px;
+    }
+    40% {
+      transform: translateX(0%);
+      width: 80%;
+    }
+    80% {
+      width: 100%;
+      transform: translateX(0px);
+    }
+    90% {
+      width: 80%;
+      transform: translateX(15px);
+    }
+    100% {
+      transform: translateX(0px);
+      width: 16px;
+    }
+  }
+  
+
 
 /* Home */
 
@@ -271,10 +413,11 @@ h1 {
 }
 
 .card {
-    width: 180px;
-    height: 180px;
-    padding: 1em .5em;
+    width: 200px;
+    height: 200px;
+    padding: 1em ;
     box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+    margin-top: 1em;
 }
 
 .icon {
@@ -534,6 +677,34 @@ textarea {
     flex-direction: column;
 }
 
+.signup {
+    text-align: center;
+    border: 1px solid lightgray;
+    /* background: rgba(137, 43, 226, 0.258); */
+    width: 90%;
+    padding: 1em;
+}
+
+.signup h1 {
+    word-spacing: 10px;
+    color: black;
+}
+
+.s-input {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 40em;
+    padding: 1em;
+    margin: auto;
+        background: rgba(137, 43, 226, 0.258);
+
+}
+
+.s-input button {
+    border-radius: 0;
+    width: 90%;
+}
+
 .social-links {
     padding: .5em;
     width: 400px;
@@ -566,6 +737,16 @@ textarea {
 
 
 /* Media Quries */
+@media (max-width : 1115px) {
+    .about .content {
+        width: 55%;
+    }
+
+    .about-img {
+        width: 60%;
+    }
+
+}
 
 @media (max-width : 1000px) {
 
@@ -588,10 +769,11 @@ textarea {
 
 @media (max-width : 880px) {
 
-    .header{
+    .header {
         justify-content: space-around;
 
     }
+
     .btn1 {
         width: 8em;
     }
@@ -604,7 +786,6 @@ textarea {
     /* Menue styling starts */
     .bar {
         display: block;
-        position: relative;
     }
 
     .bar i {
@@ -613,11 +794,11 @@ textarea {
     }
 
     .menue {
-        position: absolute;
-        top: 3.5em;
-        right: .5em;
-        width: 180px;
-        box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+        position: fixed;
+        top: 3.8em;
+        right: 0;
+        width: 100vw;
+        /* box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16); */
         text-align: center;
         background-color: white;
         padding: 1em 0;
@@ -625,6 +806,7 @@ textarea {
         align-items: center;
         justify-content: space-evenly;
         display: none;
+        border-top: 1px solid rgba(211, 211, 211, 0.835);
     }
 
 
@@ -640,7 +822,6 @@ textarea {
         background-color: rgba(137, 43, 226, 0.233);
 
     }
-
     .menue.active {
         display: flex;
     }
@@ -718,11 +899,17 @@ textarea {
         padding-right: 0;
     }
 
+    .child1 {
+        -webkit-box-reflect: right 2px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(70, 68, 68, 0.4));
+    }
+
     .child1 img {
         height: 170px;
         width: 150px;
         outline-offset: .4em;
         margin-top: 2em;
+        -webkit-box-reflect: left 2px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(70, 68, 68, 0.4));
+
     }
 
     .child2 {
@@ -734,10 +921,29 @@ textarea {
     .q1 {
         width: 86vw;
     }
+
+    .signup {
+        padding: 1.5em;
+        width: 90%;
+    }
+
+    .signup h1 {
+        font-size: 2em;
+        word-spacing: 6px;
+    }
+
+    .signup p {
+        font-size: .8em;
+    }
+
+    .s-input {
+        width: 30em;
+    }
+
 }
 
 @media (max-width : 580px) {
-    .header{
+    .header {
         justify-content: space-between;
         padding: 0 1.5em;
 
@@ -774,9 +980,32 @@ textarea {
         width: 90%;
     }
 
+
+    .signup {
+        padding: 1em;
+        width: 90%;
+    }
+
+    .signup h1 {
+        font-size: 1.5em;
+        word-spacing: 4px;
+    }
+
+    .signup p {
+        font-size: .7em;
+    }
+
+    .s-input {
+        width: 26em;
+        /* padding: 0; */
+    }
+.s-input button{
+    width: 100%;
 }
 
-@media (max-width : 450px) {
+}
+
+@media (max-width : 490px) {
     .modal-content {
         font-size: small;
     }
@@ -788,6 +1017,41 @@ textarea {
     .about button {
         width: 7em;
         padding: .6em 0;
+    }
+
+
+    .signup {
+        width: 90%;
+    }
+
+    .signup h1 {
+        font-size: 1.4em;
+        word-spacing: 2px;
+    }
+
+    .signup p {
+        font-size: .6em;
+    }
+
+    .s-input {
+        width: 18em;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        justify-items: center;
+    }
+    .s-input input{
+        width: 90%;
+    }
+    .s-input button{
+        width: 50%;
+    }
+
+}
+
+@media (max-width : 315px) {
+    .s-input {
+      
+        margin-left: -1.2em;
     }
 
 }
