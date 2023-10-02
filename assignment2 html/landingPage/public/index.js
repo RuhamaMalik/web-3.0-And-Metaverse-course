@@ -43,8 +43,8 @@ window.addEventListener('load', function () {
   loader.classList.add('animate-loader');
 
   setTimeout(function () {
-    loader.classList.remove('animate-loader');
-  }, 8000); 
+    loader.classList.add('hidden');
+  }, 4000); 
 });
 
 // CARDS
