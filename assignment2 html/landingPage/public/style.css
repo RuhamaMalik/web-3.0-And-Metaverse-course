@@ -194,7 +194,7 @@ h1 {
 
 /* .loading span */
 .welcome .loading span {
-    background-color: white  ;
+    background-color: white;
     border-radius: 50px;
     display: block;
     height: 20px;
@@ -633,7 +633,6 @@ h1 {
 /* ////////////////////////////// FAQs ////////////////////////// */
 .faq {
     margin-top: 1.5em;
-
 }
 
 .faq span {
@@ -650,6 +649,7 @@ h1 {
     display: flex;
     align-items: center;
     margin-top: 1em;
+    flex-wrap: wrap;
 }
 
 .ques {
@@ -669,6 +669,25 @@ h1 {
 
 .q2 img {
     width: 35px;
+
+}
+
+.ans {
+    padding: 0;
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    background: blueviolet;
+    color: rgba(255, 255, 255, 0.867);
+    transition: max-height 0.3s ease-in-out;
+    border-radius: 20px;
+}
+
+.ans.active {
+    max-height:1000px; /* Adjust this value as needed to match the expected maximum height of your answers */
+    margin-top: 1em;
+    padding: 1em;
+
 }
 
 /* ////////////////////////  BLOG ///////////////////////////////// */
@@ -970,9 +989,10 @@ textarea {
     .about-img {
         width: 60%;
     }
-.tabs{
-    width: 75%;
-}
+
+    .tabs {
+        width: 75%;
+    }
 
 
 }

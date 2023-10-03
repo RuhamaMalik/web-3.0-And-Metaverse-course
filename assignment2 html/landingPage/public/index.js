@@ -3,25 +3,25 @@
 let menue = document.querySelector('.menue');
 let options = document.querySelectorAll('.option')
 let bar = document.getElementById('bar')
-bar.addEventListener('click',()=>{
-menue.classList.toggle("active");
+bar.addEventListener('click', () => {
+  menue.classList.toggle("active");
 })
 
 options.forEach(option => {
-  option.addEventListener('click',()=>{    
+  option.addEventListener('click', () => {
     menue.classList.remove("active");
-    })
+  })
 });
 window.addEventListener('scroll', () => {
   menue.classList.remove("active");
 
 })
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
   if (event.target !== bar) {
     menue.classList.remove("active");
   }
 });
- 
+
 // ACTIVE TAB
 const tabItems = document.querySelectorAll('.tabs li');
 
@@ -38,14 +38,14 @@ tabItems[0].classList.add('active-tab');
 
 //LOADING SCREEN
 
-window.addEventListener('load', function () {
-  const loader = document.querySelector('.welcome');
-  loader.classList.add('animate-loader');
+// window.addEventListener('load', function () {
+//   const loader = document.querySelector('.welcome');
+//   loader.classList.add('animate-loader');
 
-  setTimeout(function () {
-    loader.classList.add('hidden');
-  }, 4000); 
-});
+//   setTimeout(function () {
+//     loader.classList.add('hidden');
+//   }, 4000); 
+// });
 
 // CARDS
 
@@ -55,22 +55,23 @@ var cards = document.querySelectorAll('.card');
 setInterval(() => {
   cards.forEach(card => {
     card.classList.remove('animate__zoomIn')
-  
+
   });
-  
+
 }, 3000);
-tabBtn.addEventListener('click', ()=>{
+tabBtn.addEventListener('click', () => {
   cards.forEach(card => {
     card.classList.add('animate__zoomIn')
-  
+
   });
+})
+window.addEventListener('load', () => {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.classList.add('animate__zoomIn')
   })
-  window.addEventListener('load', () => {
-    const cards = document.querySelectorAll('.card');
-  
-    cards.forEach(card => {
-      card.classList.add('animate__zoomIn')
-    })})
+})
 
 function addClassOnScroll(elements, className) { // scroll
   const windowHeight = window.innerHeight;
@@ -92,23 +93,23 @@ window.addEventListener('scroll', () => {
 
 
 
-    
+
 // MODAL
 var modal = document.getElementById("myModal");
 var closeModal = document.getElementById("closeModal");
 var submitButton = document.getElementById("triggerModal");
 
-submitButton.addEventListener("click", function() { // display modal
+submitButton.addEventListener("click", function () { // display modal
   modal.style.display = "flex";
- 
+
 });
 
-closeModal.addEventListener("click", function() { //close
+closeModal.addEventListener("click", function () { //close
   modal.style.display = "none";
 });
 
 // Close the modal if the user clicks outside the modal content
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
@@ -117,18 +118,38 @@ var modal2 = document.getElementById("myModal2");
 var closeModal2 = document.getElementById("closeModal2");
 var submitButton2 = document.getElementById("triggerModal2");
 
-submitButton2.addEventListener("click", function() { // display modal
+submitButton2.addEventListener("click", function () { // display modal
   modal2.style.display = "flex";
- 
+
 });
 
-closeModal2.addEventListener("click", function() { //close
+closeModal2.addEventListener("click", function () { //close
   modal2.style.display = "none";
 });
 
 // Close the modal if the user clicks outside the modal content
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
   if (event.target == modal) {
     modal2.style.display = "none";
   }
 });
+
+
+//FAQ,S  Answer
+
+let questions = document.querySelectorAll('.ques');
+let answers = document.querySelectorAll('.ans');
+
+questions.forEach((ques, index) => {
+  ques.addEventListener('click', () => {
+      // Close other answers
+      answers.forEach((ans, i) => {
+        if (i !== index) {
+          ans.classList.remove("active");
+        }
+      });
+        answers[index].classList.toggle("active"); // display ans
+    
+  });
+}); 
+
