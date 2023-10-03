@@ -38,14 +38,14 @@ tabItems[0].classList.add('active-tab');
 
 //LOADING SCREEN
 
-// window.addEventListener('load', function () {
-//   const loader = document.querySelector('.welcome');
-//   loader.classList.add('animate-loader');
+window.addEventListener('load', function () {
+  const loader = document.querySelector('.welcome');
+  loader.classList.add('animate-loader');
 
-//   setTimeout(function () {
-//     loader.classList.add('hidden');
-//   }, 4000); 
-// });
+  setTimeout(function () {
+    loader.classList.add('hidden');
+  }, 4000); 
+});
 
 // CARDS
 
