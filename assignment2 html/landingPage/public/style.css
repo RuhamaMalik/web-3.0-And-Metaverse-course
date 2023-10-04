@@ -1,17 +1,90 @@
 * {
-    transition: .2s ease;
     scroll-behavior: smooth;
+    box-sizing: border-box;
     text-decoration: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 
 
 }
 
+
+:root {
+    --color: rgb(138, 43, 226);
+    --white: rgb(255, 255, 255);
+    --light-color: rgba(137, 43, 226, 0.233);
+    --btn1-background: rgb(94, 15, 168);
+    --btn2-border: 1px solid rgba(137, 43, 226, 0.5);
+    --img: hue-rotate(0deg);
+    --img2: hue(0deg);
+        --img3: var(--img2);
+    --box-shadow: inset 5px 5px 12px var(--white), 5px 5px 12px rgba(0, 0, 0, .16); 
+--box-shadow2: inset 5px 5px 12px rgba(130, 75, 196, 0.438), 5px 5px 12px rgba(0, 0, 0, .16);
+--title : rgb(188, 138, 234);
+
+
+
+
+
+
+    /* blue */
+
+    /* --color: rgb(43, 162, 226);
+    --white: rgb(255, 255, 255);
+    --light-color: rgba(43, 162, 226, 0.233);
+    --btn1-background: rgb(15, 122, 168);
+    --btn2-border: 1px solid rgba(43, 186, 226, 0.5);
+    --img: hue-rotate(-75deg);
+    --img2: hue-rotate(280deg) brightness(130%) drop-shadow(16px 16px 20px var(--color));
+       --img3: var(--img2);
+    --box-shadow: inset 5px 5px 12px var(--white), 5px 5px 12px rgba(0, 0, 0, .16); 
+    --box-shadow2: inset 5px 5px 12px rgba(130, 75, 196, 0.438), 5px 5px 12px rgba(0, 0, 0, .16);
+    --title :var(--color); */
+
+
+
+    /* red */
+    /* --color: rgb(194, 9, 9);
+    --white: rgb(250, 242, 242);
+    --light-color: rgba(189, 46, 46, 0.39);
+    --btn1-background: rgb(170, 7, 7);
+    --btn2-border: 1px solid rgba(226, 43, 43, 0.5);
+    --img: hue-rotate(100deg) brightness(120%) drop-shadow(16px 16px 20px var(--color));
+    --img2: hue-rotate(70deg) brightness(130%) drop-shadow(16px 16px 20px var(--color));
+    --img3: var(--img2);
+    --box-shadow: inset 5px 5px 12px var(--white), 5px 5px 12px rgba(0, 0, 0, .16);
+    --box-shadow2: 5px 5px 12px rgba(196, 75, 75, 0.438), 5px 5px 12px rgba(0, 0, 0, .16);
+    --title: rgb(237, 165, 165); */
+
+    /* green */
+    /* --color: rgb(9, 194, 52);
+    --white: rgb(250, 242, 242);
+    --light-color: rgba(90, 201, 35, 0.39);
+    --btn1-background: rgb(8, 153, 10);
+    --btn2-border: 1px solid rgba(64, 226, 43, 0.5);
+    --img: hue-rotate(200deg) brightness(110%);
+    --img2: hue-rotate(180deg) brightness(130%) drop-shadow(16px 16px 20px rgba(94, 189, 46, 0.63));
+    --img3: var(--img2) brightness(140%);
+    --box-shadow: inset 5px 5px 12px var(--white), 5px 5px 12px rgba(0, 0, 0, .16);
+    --box-shadow2: 5px 5px 12px rgba(75, 196, 103, 0.438), 5px 5px 12px rgba(0, 0, 0, .16);
+    --title: var(--color); */
+
+    /* orange */
+    /* --color: rgb(194, 89, 9);
+    --white: rgb(250, 242, 242);
+    --light-color: rgba(201, 110, 35, 0.39);
+    --btn1-background: rgb(212, 116, 25);
+    --btn2-border: 1px solid rgba(226, 119, 43, 0.5);
+    --img: hue-rotate(120deg) brightness(110%);
+    --img2: hue-rotate(110deg) brightness(130%) drop-shadow(16px 16px 20px rgba(176, 118, 32, 0.63));
+    --img3: var(--img2) brightness(140%);
+    --box-shadow: inset 5px 5px 12px var(--white), 5px 5px 12px rgba(0, 0, 0, .16);
+    --box-shadow2: 5px 5px 12px rgba(250, 195, 75, 0.438), 5px 5px 12px rgba(0, 0, 0, .16);
+    --title: var(--color); */
+}
+
 body {
     font-family: sans-serif;
-
 }
 
 a {
@@ -25,7 +98,7 @@ h1 {
 
 .btn1 {
     width: 10em;
-    background-color: blueviolet;
+    background-color: var(--color);
     border: none;
     outline: none;
     color: aliceblue;
@@ -36,15 +109,15 @@ h1 {
 }
 
 .btn1:hover {
-    background-color: rgb(94, 15, 168);
-    box-shadow: inset 5px 5px 12px rgba(130, 75, 196, 0.438), 5px 5px 12px rgba(0, 0, 0, .16);
-
+    background-color: var(--btn1-background);
+    box-shadow: var(--box-shadow2);
+    transition: .2s ease;
 }
 
 .btn2 {
-    border: 1px solid rgba(137, 43, 226, 0.5);
+    border: var(--btn2-border);
     outline: none;
-    color: blueviolet;
+    color: var(--color);
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 20px;
@@ -55,8 +128,8 @@ h1 {
 
 .btn2:hover {
     border: none;
-    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
-
+    box-shadow: var(--box-shadow);
+    transition: .2s ease;
 }
 
 /* /////////////////////////////////////// Header */
@@ -65,11 +138,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+    /* box-shadow: inset 5px 5px 12px rgb(255, 255, 255), 5px 5px 12px rgba(0, 0, 0, .16); */
     font-family: fantasy;
     width: 100vw;
     position: fixed;
-    background-color: white;
+    background-color: var(--white);
     z-index: 1;
 }
 
@@ -79,7 +152,7 @@ h1 {
 }
 
 .header li:hover {
-    border-bottom: 1px solid blueviolet;
+    border-bottom: 1px solid var(--color);
     padding-bottom: 2px;
 }
 
@@ -88,7 +161,7 @@ h1 {
 }
 
 .logo span {
-    color: blueviolet;
+    color: var(--color);
     font-size: 2em;
 }
 
@@ -104,11 +177,11 @@ h1 {
 }
 
 .tabs li a:hover {
-    color: blueviolet;
+    color: var(--color);
 }
 
 .tabs .active-tab a {
-    color: blueviolet;
+    color: var(--color);
 }
 
 .bar i {
@@ -145,7 +218,7 @@ h1 {
 
 }
 
-/* .loading */
+/* ///////////// loading //////////////*/
 .welcome .loading {
     width: 180px;
     height: 80px;
@@ -157,7 +230,7 @@ h1 {
     top: 0;
     padding: 0;
     margin: 0;
-    color: blueviolet;
+    color: var(--color);
     font-family: "Oxygen", sans-serif;
     animation: text 3.5s ease both infinite;
     font-size: 14px;
@@ -194,7 +267,7 @@ h1 {
 
 /* .loading span */
 .welcome .loading span {
-    background-color: white;
+    background-color: var(--white);
     border-radius: 50px;
     display: block;
     height: 20px;
@@ -211,7 +284,7 @@ h1 {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: blueviolet;
+    background-color: var(--color);
     border-radius: inherit;
     animation: loading2 3.5s ease both infinite;
 }
@@ -274,7 +347,7 @@ h1 {
 
 
 
-/* Home */
+/* ///////////////////////// Home ///////////////////////////*/
 
 .home,
 .about,
@@ -303,7 +376,8 @@ h1 {
 .home-img {
     width: 50%;
     height: 65%;
-    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+    box-shadow: var(--box-shadow);
+    filter: var(--img);
 }
 
 /* //////////////////////// About ////////////////////// */
@@ -321,13 +395,14 @@ h1 {
 }
 
 .about span {
-    color: blueviolet;
+    color: var(--color);
 
 }
 
 .about-img {
     width: 65%;
     height: 75%;
+    filter: var(--img2)
 }
 
 .about button {
@@ -346,7 +421,7 @@ h1 {
 }
 
 .demo-box h1 span {
-    color: blueviolet;
+    color: var(--color);
 }
 
 .demosGrid {
@@ -358,7 +433,7 @@ h1 {
 
 .demo {
     position: relative;
-    border: 2px solid blueviolet;
+    border: 2px solid var(--color);
     height: 16em;
     width: 22em;
     cursor: url('./images/cursor.png'), crosshair;
@@ -390,7 +465,7 @@ h1 {
 .overlay h3,
 .overlay p,
 .overlay a {
-    color: white;
+    color: var(--white);
     position: absolute;
     top: 50%;
     left: 47%;
@@ -403,7 +478,7 @@ h1 {
 }
 
 .overlay p {
-    color: rgb(188, 138, 234);
+    color: var(--title);
     font-size: .9em;
     top: 60%;
     text-transform: capitalize;
@@ -431,11 +506,11 @@ h1 {
 }
 
 .reviews span {
-    color: blueviolet;
+    color: var(--color);
 }
 
 .carousel-inner {
-    background-color: blueviolet;
+    background-color: var(--color);
 }
 
 .carousel-item {
@@ -455,13 +530,13 @@ h1 {
 .child1 img {
     height: 270px;
     width: 220px;
-    border: 6px solid white;
+    border: 6px solid var(--white);
     outline: 5px outset rgb(255, 255, 255);
     outline-offset: 12px;
 }
 
 .child2 {
-    background-color: white;
+    background-color: var(--white);
     height: 80%;
     outline: 5px outset rgb(189, 187, 187);
     display: grid;
@@ -492,7 +567,8 @@ h1 {
 
 .services {
     margin-top: 6em;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: auto;
     text-align: center;
     padding-top: 5em;
 
@@ -511,26 +587,28 @@ h1 {
 }
 
 .services span {
-    color: blueviolet;
+    color: var(--color);
 }
 
 .cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    height: 40%;
+
+    min-height: 40%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 1em;
+    justify-items: center;
 }
 
 .card {
     width: 200px;
     height: 200px;
     padding: 1em;
-    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+    box-shadow: var(--box-shadow);
     margin-top: 1em;
 }
 
 .icon {
-    color: blueviolet;
+    color: var(--color);
     height: 40%;
     font-size: 2em;
     display: flex;
@@ -539,7 +617,7 @@ h1 {
 }
 
 .card:hover {
-    background-color: rgba(137, 43, 226, 0.233);
+    background-color: var(--light-color);
     box-shadow: none;
 
 }
@@ -552,11 +630,11 @@ h1 {
 }
 
 .t-head span {
-    color: blueviolet;
+    color: var(--color);
 }
 
 .team {
-    background-color: blueviolet;
+    background-color: var(--color);
     height: 70vh;
     overflow: hidden;
     white-space: nowrap;
@@ -585,7 +663,7 @@ h1 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: whitesmoke;
+    color: var(--white)smoke;
 }
 
 @keyframes scroll {
@@ -603,7 +681,7 @@ h1 {
     height: 120px;
     width: 120px;
     padding: 10px;
-    border: 5px solid white;
+    border: 5px solid var(--white);
     outline: 2px solid rgb(228, 157, 250);
 }
 
@@ -614,8 +692,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    color: blueviolet;
+    background-color: var(--white);
+    color: var(--color);
 }
 
 .team .name {
@@ -633,43 +711,45 @@ h1 {
 /* ////////////////////////////// FAQs ////////////////////////// */
 .faq {
     margin-top: 1.5em;
+
 }
 
 .faq span {
-    color: blueviolet;
+    color: var(--color);
     font-size: 1.6em;
 }
 
 .q1 {
     width: 50%;
-
 }
 
 .q2 {
+
     display: flex;
     align-items: center;
     margin-top: 1em;
     flex-wrap: wrap;
+
 }
 
 .ques {
     border-radius: 20px;
     padding: 10px 0 10px 25px;
-    color: blueviolet;
+    color: var(--color);
     width: 90%;
     cursor: pointer;
-    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
+    box-shadow: var(--box-shadow);
 }
 
 .ques:hover {
-    background-color: rgba(137, 43, 226, 0.233);
+    background-color: var(--light-color);
     box-shadow: none;
 
 }
 
 .q2 img {
     width: 35px;
-
+    filter: var(--img3)
 }
 
 .ans {
@@ -677,14 +757,15 @@ h1 {
     margin-top: 0;
     max-height: 0;
     overflow: hidden;
-    background: blueviolet;
+    background: var(--color);
     color: rgba(255, 255, 255, 0.867);
     transition: max-height 0.3s ease-in-out;
     border-radius: 20px;
 }
 
 .ans.active {
-    max-height:1000px; /* Adjust this value as needed to match the expected maximum height of your answers */
+    max-height: 1000px;
+    /* Adjust this value as needed to match the expected maximum height of your answers */
     margin-top: 1em;
     padding: 1em;
 
@@ -702,7 +783,7 @@ h1 {
 }
 
 .blog h1 span {
-    color: blueviolet;
+    color: var(--color);
 }
 
 .box-container {
@@ -715,7 +796,7 @@ h1 {
 }
 
 .box-container .box {
-    border: 2px solid blueviolet;
+    border: 2px solid var(--color);
     border-radius: .5em;
     box-shadow: .5em .5em 0 rgba(41, 4, 2, .2);
     padding: 1em;
@@ -758,13 +839,13 @@ h1 {
 }
 
 .icon a:hover {
-    color: blueviolet;
+    color: var(--color);
 }
 
 
 .icon a i {
     padding-right: .5rem;
-    color: blueviolet;
+    color: var(--color);
 }
 
 .box .content h3 {
@@ -784,30 +865,30 @@ h1 {
 
 .btn {
     width: 60%;
-    border: 2px solid blueviolet;
+    border: 2px solid var(--color);
     border-radius: .5em;
     box-shadow: .5em .5em 0 rgba(41, 4, 2, .2);
-    color: blueviolet;
+    color: var(--color);
     cursor: pointer;
-    background: white;
+    background: var(--white);
 }
 
 .btn span {
     padding: .4em 1em;
     border-radius: .5rem;
-    background-color: blueviolet;
-    color: white;
+    background-color: var(--color);
+    color: var(--white);
 
 }
 
 .btn:hover {
-    color: white;
-    background-color: blueviolet;
+    color: var(--white);
+    background-color: var(--color);
 }
 
 .btn:hover span {
-    color: blueviolet;
-    background-color: white;
+    color: var(--color);
+    background-color: var(--white);
     margin-left: 1em;
 }
 
@@ -817,7 +898,7 @@ h1 {
 .contact {
     margin-top: 2em;
     justify-content: center;
-    background-color: blueviolet;
+    background-color: var(--color);
 
 }
 
@@ -826,7 +907,7 @@ h1 {
     min-height: 60%;
     max-height: auto;
     width: 60%;
-    background-color: white;
+    background-color: var(--white);
     border: 5px outset rgb(233, 191, 233);
 
 }
@@ -851,8 +932,8 @@ textarea {
     outline: none;
     width: 96%;
     padding: 10px 0 10px 25px;
-    box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, .16);
-    color: blueviolet;
+    box-shadow: var(--box-shadow);
+    color: var(--color);
 }
 
 .btnSubmit {
@@ -879,7 +960,7 @@ textarea {
 .modal-content,
 .modal-content-about {
     position: relative;
-    background-color: white;
+    background-color: var(--white);
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
@@ -908,7 +989,7 @@ textarea {
 }
 
 .close:hover {
-    color: blueviolet;
+    color: var(--color);
 
 }
 
@@ -941,7 +1022,7 @@ textarea {
     width: 40em;
     padding: 1em;
     margin: auto;
-    background: rgba(137, 43, 226, 0.258);
+    background: var(--light-color);
 
 }
 
@@ -969,14 +1050,14 @@ textarea {
 }
 
 .social-links a:hover {
-    background-color: rgba(137, 43, 226, 0.233);
+    background-color: var(--light-color);
     box-shadow: none;
 
 
 }
 
 .footer span {
-    color: blueviolet;
+    color: var(--color);
 }
 
 
@@ -1053,7 +1134,7 @@ textarea {
         right: 0;
         width: 100vw;
         text-align: center;
-        background-color: white;
+        background-color: var(--white);
         padding: 1em 0;
         flex-direction: column;
         align-items: center;
@@ -1072,7 +1153,7 @@ textarea {
     }
 
     .menue a:hover {
-        background-color: rgba(137, 43, 226, 0.233);
+        background-color: var(--light-color);
 
     }
 
@@ -1095,9 +1176,7 @@ textarea {
     }
 
     .home,
-    .cards,
     .services,
-    /* .team, */
     .faq {
         flex-direction: column;
         height: max-content;
@@ -1213,11 +1292,6 @@ textarea {
 
     .bar i {
         font-size: 1.5em;
-    }
-
-    .cd {
-        flex-direction: column;
-        align-items: center;
     }
 
     .q1 {

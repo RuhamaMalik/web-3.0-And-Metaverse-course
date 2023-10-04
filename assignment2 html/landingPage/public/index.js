@@ -22,7 +22,8 @@ window.addEventListener("click", function (event) {
   }
 });
 
-// ACTIVE TAB
+///////////////////// ACTIVE TAB
+
 const tabItems = document.querySelectorAll('.tabs li');
 
 tabItems.forEach(tab => {
@@ -47,7 +48,7 @@ window.addEventListener('load', function () {
   }, 4000); 
 });
 
-// CARDS
+/////////////////////////////////// CARDS
 
 var tabBtn = document.getElementById('services');
 var cards = document.querySelectorAll('.card');
@@ -142,14 +143,14 @@ let answers = document.querySelectorAll('.ans');
 
 questions.forEach((ques, index) => {
   ques.addEventListener('click', () => {
-      // Close other answers
-      answers.forEach((ans, i) => {
-        if (i !== index) {
-          ans.classList.remove("active");
-        }
-      });
-        answers[index].classList.toggle("active"); // display ans
-    
+    // Close other answers
+    answers.forEach((ans, i) => {
+      if (i !== index) {
+        ans.classList.remove("active");
+      }
+    });
+    answers[index].classList.toggle("active"); // display ans
+
   });
-}); 
+});
 
