@@ -22,7 +22,7 @@ window.addEventListener("click", function (event) {
   }
 });
 
-///////////////////// ACTIVE TAB
+///////////////////// NAVBAR ACTIVE TAB
 
 const tabItems = document.querySelectorAll('.tabs li');
 
@@ -48,7 +48,7 @@ window.addEventListener('load', function () {
   }, 4000); 
 });
 
-/////////////////////////////////// CARDS
+/////////////////////////////////// SERVICES CARDS ANIMATION CONTROL
 
 var tabBtn = document.getElementById('services');
 var cards = document.querySelectorAll('.card');
@@ -95,7 +95,7 @@ window.addEventListener('scroll', () => {
 
 
 
-// MODAL
+//  LEARN MORE ABOUT MODAL
 var modal = document.getElementById("myModal");
 var closeModal = document.getElementById("closeModal");
 var submitButton = document.getElementById("triggerModal");
@@ -115,6 +115,9 @@ window.addEventListener("click", function (event) {
     modal.style.display = "none";
   }
 });
+
+//  CONTACT FORM SUBMIT MODAL
+
 var modal2 = document.getElementById("myModal2");
 var closeModal2 = document.getElementById("closeModal2");
 var submitButton2 = document.getElementById("triggerModal2");
@@ -136,7 +139,7 @@ window.addEventListener("click", function (event) {
 });
 
 
-//FAQ,S  Answer
+//FAQ,S  Answer DISPLAY
 
 let questions = document.querySelectorAll('.ques');
 let answers = document.querySelectorAll('.ans');
@@ -149,7 +152,7 @@ questions.forEach((ques, index) => {
         ans.classList.remove("active");
       }
     });
-    answers[index].classList.toggle("active"); // display ans
+    answers[index].classList.toggle("active"); // display answer
 
   });
 });
